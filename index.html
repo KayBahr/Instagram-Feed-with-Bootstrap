@@ -6,67 +6,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Bootstrap Insta Feed</title>
 </head>
 <body>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand">
-          <i class="bi bi-instagram"></i>
-            Instagram
-        </a>
-      </div>
-
-      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Create a new post
-      </button>
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Right-aligned menu example
+  <nav class="navbar" style="background-color: rgb(248, 249, 250); padding-bottom: 15px;">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <i class="bi bi-instagram"></i>
+          Instagram
+      </a>
+      
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-success ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Create a new post
         </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><button class="dropdown-item" type="button">Action</button></li>
-          <li><button class="dropdown-item" type="button">Another action</button></li>
-          <li><button class="dropdown-item" type="button">Something else here</button></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container text-center">
-      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-        <div class="col">
-          <div class="p-3">
-            <img scr="unsplashdog.jpg" alt="dog">
-          </div>
-        </div>
-        <div class="col">
-          <div class="p-3">Row column 2</div>
-        </div>
-        <div class="col">
-          <div class="p-3">Row column 3</div>
+  
+        <div class="btn-group" style="margin-left: 10px; margin-right: 10px;">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-gear-fill"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button">Profile</button></li>
+            <li><button class="dropdown-item" type="button">Accesibility</button></li>
+            <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" style="color: red">Log out</a></li>
+          </ul>
         </div>
       </div>
     </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <strong>Caption:</strong>
+            <div class="input-group" style="margin-top: 5px;">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Add the caption of your post here"></textarea>
+            </div>
+            <div style="margin: 10px; margin-left: -5px;">
+              <button type="button" class="btn" style="margin: 5px; background-color:rgb(248, 250, 255); border: gainsboro 1px solid;"><i class="bi bi-camera-fill"></i></button>
+              <button type="button" class="btn" style="background-color:rgb(248, 250, 255); border: gainsboro 1px solid;"><i class="bi bi-geo-alt-fill"></i></button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>  
+
+  <div class="d-flex align-items-center justify-content-center">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true"><i class="bi bi-grid-3x3"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="feed-tab" data-bs-toggle="tab" data-bs-target="#feed-tab-pane" type="button" role="tab" aria-controls="feed-tab-pane" aria-selected="false"><i class="bi bi-square-fill"></i></button>
+      </li>
+    </ul>  
+  </div>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+      <div class="container text-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          <div class="col">
+            <img src="https://www.gather-cowork.com/wp-content/uploads/2021/06/happy-pup-1.png" class="img-fluid" alt="A happy dog">
+          </div>
+          <div class="col">
+            <img src="https://img.freepik.com/premium-photo/business-people-row-seminar-conference-networking-tablet-cellphone-planning-notebook-sitting-line-office-happy-employee-worker-professional-interview_590464-82403.jpg" class="img-fluid" alt="A business team">
+          </div>
+          <div class="col">
+            <img src="https://media.istockphoto.com/id/829917220/photo/aerial-view-of-oceanside-california.jpg?s=612x612&w=0&k=20&c=JyAG7-nvT83vg25O_dixD57Lczjp51cfRcF1i82E0VQ=" class="img-fluid" alt="Oceanside city">
+          </div>
+          <div class="col">
+            <img src="https://t4.ftcdn.net/jpg/03/36/44/95/360_F_336449581_4MwlMeimHwsdpPKYWpVgjP6l9in9j8Be.jpg" class="img-fluid" alt="A happy woman">
+          </div>
+          <div class="col">
+            <img src="https://media.istockphoto.com/id/1318491139/photo/eiffel-tower-and-spring-tulips-on-field-of-mars-paris-france.jpg?s=612x612&w=0&k=20&c=6_MdByJ654lWqA0bH1T7IICr2MUtXWllplcU-PvGbIg=" class="img-fluid" alt="Eiffel tower garden">
+          </div>
+          <div class="col">
+            <img src="https://storage.googleapis.com/afs-prod/media/b646894ae1f34b239fff47608dc1d553/3000.jpeg" class="img-fluid" alt="Soccer action pose">
+          </div>
+          <div class="col">
+            <img src="https://media.istockphoto.com/id/1316730500/photo/african-american-family-walking-trough-park-parents-carrying-children-on-piggyback.jpg?s=170667a&w=0&k=20&c=HJzLKQ1-9mzE3mfPHf09COvBmZLxw-13Lt-N-i-zCIk=" class="img-fluid" alt="A family in nature">
+          </div>
+          <div class="col">
+            <img src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg" class="img-fluid" alt="Computer code">
+          </div>
+          <div class="col">
+            <img src="https://www.news-medical.net/images/news/ImageForNews_741479_16787417546147005.jpg" class="img-fluid" alt="Happy students in a classroom">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="tab-pane fade" id="feed-tab-pane" role="tabpanel" aria-labelledby="feed-tab" tabindex="0">
+      <div class="feed">
+        <h2>
+          4/24
+        </h2>
+        <h1>
+          A Happy Doggo
+        </h1>
+        <img src="https://www.gather-cowork.com/wp-content/uploads/2021/06/happy-pup-1.png" alt="A happy dog">
+        <p>
+          <strong>3845 likes</strong><br>
+          My dog is a happy virus.  I love them.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          4/28
+        </h2>
+        <h1>
+          Teamwork
+        </h1>
+        <img src="https://img.freepik.com/premium-photo/business-people-row-seminar-conference-networking-tablet-cellphone-planning-notebook-sitting-line-office-happy-employee-worker-professional-interview_590464-82403.jpg" alt="A business team">
+        <p>
+          <strong>178 likes</strong><br>
+          Working with a team gives great satisfation.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          5/11
+        </h2>
+        <h1>
+          Beautiful City and Ocean
+        </h1>
+        <img src="https://media.istockphoto.com/id/829917220/photo/aerial-view-of-oceanside-california.jpg?s=612x612&w=0&k=20&c=JyAG7-nvT83vg25O_dixD57Lczjp51cfRcF1i82E0VQ=" alt="Oceanside city">
+        <p>
+          <strong>900 likes</strong><br>
+          If you are able to travel to as many places as you can. It is always rewarding.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          6/17
+        </h2>
+        <h1>
+          Remember to stay positive
+        </h1>
+        <img src="https://t4.ftcdn.net/jpg/03/36/44/95/360_F_336449581_4MwlMeimHwsdpPKYWpVgjP6l9in9j8Be.jpg" alt="A happy woman">
+        <p>
+          <strong>57 likes</strong><br>
+          Sometimes life resembles a specific color.  I love yellow days.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          7/22
+        </h2>
+        <h1>
+          Eiffel Tower Garden is beautiful
+        </h1>
+        <img src="https://media.istockphoto.com/id/1318491139/photo/eiffel-tower-and-spring-tulips-on-field-of-mars-paris-france.jpg?s=612x612&w=0&k=20&c=6_MdByJ654lWqA0bH1T7IICr2MUtXWllplcU-PvGbIg=" alt="Eiffel tower garden">
+        <p>
+          <strong>1234 likes</strong><br>
+          Architecture and gardens are very picturesque.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          9/5
+        </h2>
+        <h1>
+          GO!
+        </h1>
+        <img src="https://storage.googleapis.com/afs-prod/media/b646894ae1f34b239fff47608dc1d553/3000.jpeg" alt="Soccer action pose">
+        <p>
+          <strong>480 likes</strong><br>
+          Good job team!
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          9/13
+        </h2>
+        <h1>
+          Happy moments in life
+        </h1>
+        <img src="https://media.istockphoto.com/id/1316730500/photo/african-american-family-walking-trough-park-parents-carrying-children-on-piggyback.jpg?s=170667a&w=0&k=20&c=HJzLKQ1-9mzE3mfPHf09COvBmZLxw-13Lt-N-i-zCIk=" alt="A family in nature">
+        <p>
+          <strong>2789 likes</strong><br>
+          I love being out in nature with family.
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          12/19
+        </h2>
+        <h1>
+          Finished onto the next...
+        </h1>
+        <img src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg" alt="Computer code">
+        <p>
+          <strong>222 likes</strong><br>
+          Here we go!
+        </p>
+      </div>
+      <div class="feed">
+        <h2>
+          2/25
+        </h2>
+        <h1>
+          I love learning new things
+        </h1>
+        <img src="https://www.news-medical.net/images/news/ImageForNews_741479_16787417546147005.jpg" alt="Happy students in a classroom">
+        <p>
+          <strong>34 likes</strong><br>
+          I'll be learning my whole life.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
